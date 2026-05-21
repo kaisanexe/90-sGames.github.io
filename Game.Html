@@ -1,38 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEON ARCADE 90s</title>
-    <style>
-        /* ... */
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f2f2f2;
-            overflow-y: hidden;
-        }
-        /* ... */
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NEON ARCADE 90s</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="scanlines"></div>
-    <div class="crt"></div>
 
-    <header>
-        <div class="marquee">
-            ✨ NEON ARCADE 90s ✨ PLAY CLASSIC GAMES ✨ FREE ✨ NO DOWNLOADS ✨ PURE JS ✨
-        </div>
-    </header>
+<div class="scanlines"></div>
+<div class="crt"></div>
 
-    <nav>
-        <button onclick="showGame('snake')">SNAKE</button>
-        <button onclick="showGame('pong')">PONG</button>
-        <button onclick="showGame('breakout')">BREAKOUT</button>
-        <button onclick="showGame('space-invaders')">SPACE INVADERS</button>
-        <button onclick="showGame('tetris')">TETRIS</button>
-    </nav>
+<header>
+  <div class="marquee">
+    ✨ NEON ARCADE 90s ✨ PLAY CLASSIC GAMES ✨ FREE ✨ NO DOWNLOADS ✨ PURE JS ✨
+  </div>
+</header>
 
-    <!-- ... -->
+<nav>
+  <button onclick="showGame('snake')">SNAKE</button>
+  <button onclick="showGame('pong')">PONG</button>
+  <button onclick="showGame('breakout')">BREAKOUT</button>
+  <button onclick="showGame('space-invaders')">SPACE INVADERS</button>
+  <button onclick="showGame('tetris')">TETRIS</button>
+</nav>
+
+<!-- SNAKE GAME -->
+<div id="snake-game-container" class="game-container">
+  <h2>🐍 <span class="green-text">SNAKE</span> 🐍</h2>
+
+  <canvas id="snake-game" width="400" height="400"></canvas>
+
+  <div class="controls">
+    <p>Use <strong>Arrow Keys</strong> to move | Press <strong>P</strong> to pause</p>
+    <p>Score: <span id="snake-score">0</span></p>
+  </div>
+</div>
+
+<!-- PONG GAME -->
+<div id="pong-game-container" class="game-container">
+  <h2>🏓 <span class="blue-text">PONG</span> 🏓</h2>
+
+  <canvas id="pong-game" width="600" height="300"></canvas>
+
+  <div class="controls">
+    <p>Player 1: <strong>W/S</strong> keys | Player 2: <strong>↑/↓</strong> arrows</p>
+    <p>Score: <span id="pong-score">0 - 0</span></p>
+  </div>
+</div>
+
+<!-- BREAKOUT GAME -->
+<div id="breakout-game-container" class="game-container">
+  <h2>🧱 <span class="purple-text">BREAKOUT</span> 🧱</h2>
+
+  <canvas id="breakout-game" width="600" height="400"></canvas>
+
+  <div class="controls">
+    <p>Use <strong>Mouse</strong> to move paddle</p>
+    <p>Lives: <span id="breakout-lives">3</span></p>
+  </div>
+</div>
+
+<!-- SPACE INVADERS -->
+<div id="space-invaders-game-container" class="game-container">
+  <h2>👽 <span class="pink-text">SPACE INVADERS</span> 👽</h2>
+
+  <canvas id="space-invaders-game" width="600" height="400"></canvas>
+
+  <div class="controls">
+    <p>Use Arrow Keys + Spacebar</p>
+  </div>
+</div>
+
+<!-- TETRIS -->
+<div id="tetris-game-container" class="game-container">
+  <h2>🧊 <span class="green-text">TETRIS</span> 🧊</h2>
+
+  <canvas id="tetris-game" width="300" height="500"></canvas>
+
+  <div class="controls">
+    <p>Arrow Keys to move</p>
+  </div>
+</div>
+
+<footer>
+  NEON ARCADE 90s © 1999-2026 | Pure JavaScript Arcade
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
